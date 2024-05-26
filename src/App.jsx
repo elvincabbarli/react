@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import About from "./pages/About";
+import Gallery from "./pages/Gallery";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
+  // jsx
+  // NODE ENDIRIN
+  // npm create vite@latest - react proyekti elave edirik
+  // npm install - node modulu yuklemek ucundur
+  // npm run dev - layiheni qaldirmaq ucundur
+  // APP.CSS SILINECEK / APP-IN ICI TEMIZLENECEK
+  // ISTIFADE OLUNMAYAN FAYLLAR BOZ RENGDE OLACAG
+  // ƏLAVƏ EDİLƏN SƏHİFƏLƏRDƏ rafce yazıb default quruluşu gətirə bilərsiniz
+  const deyisken = "Elvin";
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="container">
+        <Header />
+        <h2>REACT App</h2>
+        <p>{deyisken}</p>
+        <section>
+          <About />
+          <Gallery />
+        </section>
+        <Footer />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
+
+// =>
+// ARROW FUNCTION
+// const App = () => {
+//   return(
+
+//   )
+// }
